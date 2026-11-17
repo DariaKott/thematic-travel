@@ -1,0 +1,6 @@
+.card { min-width: 0; }
+.photo { aspect-ratio: 2 / 1; background: linear-gradient(125deg, var(--color-divider), var(--color-input-border)); margin-bottom: 24px; }
+.card h3 { font-size: clamp(28px, 3vw, 34px); }
+.location { margin-top: 12px; color: var(--color-heading); }
+.capacity { margin-top: 16px; color: var(--color-accent); font-weight: 600; }
+.description { margin-top: 8px; color: var(--color-text-muted); }

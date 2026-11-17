@@ -1,0 +1,17 @@
+.header { border-bottom: 1px solid var(--color-divider); }
+.headerInner, .footerInner { max-width: 1200px; margin-inline: auto; width: calc(100% - 64px); }
+.headerInner { min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 22px; }
+.brand { font-family: Georgia, serif; font-size: 25px; color: var(--color-heading); text-decoration: none; }
+.navigation { display: flex; flex-wrap: wrap; gap: 12px 32px; }
+.navigation a { text-decoration: none; }
+.navigation a:hover, .brand:hover { color: var(--color-accent); }
+.footer { border-top: 1px solid var(--color-divider); }
+.footerInner { padding-block: 56px 64px; }
+.footerInner h2 { font-size: 32px; margin-bottom: 16px; }
+.footerInner p { color: var(--color-text-muted); max-width: 560px; }
+@media (max-width: 767px) {
+  .headerInner, .footerInner { width: calc(100% - 32px); }
+  .headerInner { flex-wrap: wrap; gap: 16px; }
+  .brand { font-size: 23px; }
+  .navigation { gap: 12px 24px; }
+}

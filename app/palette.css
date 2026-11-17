@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #F3F4EF;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #E7EADD;
+  --color-heading: #20241B;
+  --color-text: #292D25;
+  --color-text-muted: #5B6254;
+  --color-accent: #535C39;
+  --color-accent-hover: #41492C;
+  --color-on-accent: #FFFFFF;
+  --color-divider: #D2D7CA;
+  --color-input-border: #808776;
+  --color-focus: #535C39;
+  --color-on-photo: #FFFFFF;
+  --color-photo-overlay: #171B15;
+  --color-error: #A12E36;
+  --color-success: #286044;
+}
