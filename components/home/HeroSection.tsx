@@ -5,9 +5,11 @@ export function HeroSection({ copy }: { copy: typeof ru }) {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.container}>
-        <h1 id="hero-title">{copy.siteName}</h1>
-        <p>{copy.description}</p>
-        <a className={styles.button} href="#programs">{copy.viewPrograms}</a>
+        <div className={styles.heroContent}>
+          <h1 id="hero-title">{copy.hero.title}</h1>
+          <p>{copy.hero.description}</p>
+          <a className={styles.button} href="#programs">{copy.viewPrograms}</a>
+        </div>
       </div>
     </section>
   );
