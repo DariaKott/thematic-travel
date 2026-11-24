@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import type { ru } from "@/i18n/ru";
 import styles from "./Layout.module.css";
@@ -39,9 +40,11 @@ export function SiteHeader({ copy }: { copy: typeof ru }) {
       <div id="top" aria-hidden="true" />
       <header ref={headerRef} className={styles.header}>
         <div className={styles.headerInner}>
-          <a className={styles.brand} href="#top">{copy.siteName}</a>
+          <Link className={styles.brand} href="/#top">{copy.siteName}</Link>
           <nav aria-label={copy.navigationLabel} className={styles.navigation}>
-            {copy.navigation.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
+            {copy.navigation.map((item) => (
+              <Link href={`/${item.href}`} key={item.href}>{item.label}</Link>
+            ))}
           </nav>
         </div>
       </header>

@@ -1,0 +1,112 @@
+.container {
+  --copy-width: 40rem;
+  width: calc(100% - 64px);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-block: clamp(32px, 6vw, 80px);
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.link:hover { color: var(--color-accent-hover); }
+
+.back { text-align: start; }
+
+.hero h1,
+.hero p,
+.opening,
+.section h2,
+.section p,
+.formats,
+.roomTypes {
+  max-width: var(--copy-width);
+  margin-inline: auto;
+}
+
+.opening,
+.section h2,
+.section p,
+.formats,
+.roomTypes { text-align: start; }
+
+.hero {
+  margin-top: 24px;
+  padding: clamp(24px, 5vw, 64px);
+  background: var(--color-surface-muted);
+}
+
+.hero h1 { font-size: clamp(40px, 6vw, 72px); }
+.hero p { margin-top: 16px; font-size: clamp(18px, 2vw, 21px); }
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 12px;
+  margin-top: 24px;
+}
+
+.facts li {
+  background: var(--color-surface);
+  padding: 8px 12px;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.cover {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  margin-top: 28px;
+}
+
+.section {
+  padding-block: clamp(28px, 5vw, 56px);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.section p { margin-top: 12px; }
+.fact { color: var(--color-accent); font-weight: 600; }
+.formats { list-style: disc; padding-inline-start: 1.3em; margin-top: 16px; }
+.formats li + li { margin-top: 4px; }
+.roomTypes { margin-top: 24px; }
+.roomTypes h3 { font-size: 26px; }
+.roomTypes dl { margin-top: 12px; }
+.roomTypes dl > div + div { margin-top: 12px; }
+.roomTypes dt { font-weight: 600; }
+.section .link { margin-top: 16px; }
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 480px));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.photos img { width: 100%; }
+
+@media (max-width: 767px) {
+  .container { width: calc(100% - 32px); }
+  .cover { aspect-ratio: 4 / 3; }
+  .facts { justify-content: flex-start; text-align: start; }
+}
+
+.hero .propertyName {
+  margin-top: 8px;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.hero .subtitle { font-weight: 600; }
+
+.opening {
+  padding-top: clamp(28px, 5vw, 56px);
+}
+
+.opening p + p { margin-top: 12px; }

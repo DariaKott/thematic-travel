@@ -1,0 +1,39 @@
+.carousel {
+  position: relative;
+  max-width: 640px;
+  margin: 24px auto 0;
+  background: var(--color-surface-muted);
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.frame img { object-fit: contain; }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-bg) 60%, transparent);
+  color: var(--color-heading);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.arrow:hover { background: color-mix(in srgb, var(--color-bg) 80%, transparent); }
+
+.arrow:focus-visible {
+  outline: 2px solid var(--color-on-accent);
+  box-shadow: 0 0 0 4px var(--color-heading);
+}
+
+.previous { inset-inline-start: 12px; }
+.next { inset-inline-end: 12px; }

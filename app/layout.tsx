@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { SiteFooter } from "@/components/layout/SiteFooter";
+import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ru } from "@/i18n/ru";
 import "./globals.css";
 
@@ -29,7 +31,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ru" className={`${headingFont.variable} ${bodyFont.variable}`}>
-      <body>{children}</body>
+      <body>
+        <SiteHeader copy={ru} />
+        {children}
+        <SiteFooter copy={ru.contacts} />
+      </body>
     </html>
   );
 }
