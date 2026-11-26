@@ -5,7 +5,7 @@
   align-items: center;
   padding-block: 32px;
   background-color: var(--color-photo-overlay);
-  background-image: linear-gradient(to right, rgb(12 20 24 / 50%) 0%, rgb(12 20 24 / 22%) 45%, transparent 75%), url("/images/hero.webp");
+  background-image: linear-gradient(to right, rgb(12 20 24 / 50%) 0%, rgb(12 20 24 / 22%) 45%, transparent 75%), url("../../public/images/hero.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 50%;
@@ -32,7 +32,7 @@
   .hero {
     min-height: 320px;
     background-position: center 50%;
-    background-image: linear-gradient(to bottom, rgb(12 20 24 / 60%) 0%, rgb(12 20 24 / 40%) 65%, rgb(12 20 24 / 15%) 100%), url("/images/hero.webp");
+    background-image: linear-gradient(to bottom, rgb(12 20 24 / 60%) 0%, rgb(12 20 24 / 40%) 65%, rgb(12 20 24 / 15%) 100%), url("../../public/images/hero.webp");
   }
   .section, .venuesSection { padding-block: 48px; }
   .venues, .about { grid-template-columns: minmax(0, 1fr); gap: 32px; }

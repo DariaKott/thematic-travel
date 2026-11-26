@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thematic Travel
 
-## Getting Started
+Use Node.js 22.23.5 and install dependencies with `npm ci`.
 
-First, run the development server:
+## Local development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Run `npm run dev` and open <http://localhost:3000/>.
+
+## Static export
+
+Run `npm run lint` and `npm run build`. Next.js writes the site to `out/`.
+To preview the project-site URL locally, build with the repository prefix and
+mount the export under that directory:
+
+```sh
+PAGES_BASE_PATH=/thematic-travel npm run build
+preview_dir=$(mktemp -d)
+ln -s "$PWD/out" "$preview_dir/thematic-travel"
+python3 -m http.server 4173 --bind 127.0.0.1 --directory "$preview_dir"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://127.0.0.1:4173/thematic-travel/>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## GitHub Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+In the repository, select **GitHub Actions** under **Settings → Pages →
+Build and deployment → Source**. The Pages workflow runs on pushes to `main`
+and can also be started from the Actions tab. It uses the base path reported
+by GitHub Pages and uploads `out/`.

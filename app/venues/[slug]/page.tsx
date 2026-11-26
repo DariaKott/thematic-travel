@@ -5,6 +5,8 @@ import { venues } from "@/content/venues";
 
 type Props = PageProps<"/venues/[slug]">;
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return venues.flatMap(({ slug, details }) => details ? [{ slug }] : []);
 }
